@@ -236,6 +236,7 @@ void updateChild(id, cOrF) {
 }
 
 void sendPut(command, bodyMap){
+    authToken = getAuth()
     def bodyText = JsonOutput.toJson(bodyMap)
 	Map requestParams =
 	[
