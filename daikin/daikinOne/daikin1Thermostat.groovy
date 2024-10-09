@@ -144,7 +144,7 @@ void heat(){
 
 void off(){
     parent.sendPut("/deviceData/${device.deviceNetworkId}",[mode:0])
-    updateAttr("thermostatMode","emergency heat")
+    updateAttr("thermostatMode","off")
 }
 
 void setCoolingSetpoint(temp){
@@ -184,7 +184,7 @@ void setThermostatMode(tmode){
     else if(tmode == "cool")
         cool()
     else
-        emergencyHeat()
+        off()
 }
 
 @SuppressWarnings('unused')
